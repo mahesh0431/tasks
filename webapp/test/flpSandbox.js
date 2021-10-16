@@ -36,7 +36,15 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"groups": [{
-							"tiles": [{
+							"tiles": [
+                                {
+								"tileType": "sap.ushell.ui.tile.StaticTile",
+								"properties": {
+									"title": "Risk Proposal",
+									"targetURL": "#RiskProposalApp-display"
+                                }
+                            },
+                                {
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "Tasks",
@@ -51,6 +59,20 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
+                            "RiskProposal-display": {
+								"semanticObject": "RiskProposalApp",
+								"action": "display",
+								"description": "Risk Proposal Request",
+								"title": "Risk Proposal Request",
+								"signature": {
+									"parameters": {}
+								},
+								"resolutionResult": {
+									"applicationType": "SAPUI5",
+									"additionalInformation": "SAPUI5.Component=gmriskproposal",
+									"url": "../resources/gmriskproposal"
+								}
+							},
 							"Tasks-display": {
 								"semanticObject": "Tasks",
 								"action": "display",

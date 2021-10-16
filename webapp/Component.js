@@ -42,7 +42,7 @@ sap.ui.define([
                 });
                 var oTargets = oRouter.getTargets();
                 oTargets.addTarget("childapp", {
-                    name: "bconfui",
+                    name: "gmriskproposal",
                     type: "Component",
                     controlAggregation: "midColumnPages",
                     options: {
