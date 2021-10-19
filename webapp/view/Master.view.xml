@@ -34,7 +34,8 @@
 				growing="true"
 				growingScrollToLoad="true"
 				updateFinished=".onUpdateFinished"
-				selectionChange=".onSelectionChange">
+				selectionChange=".onSelectionChange"
+                >
 				<!-- <headerToolbar>
 					<OverflowToolbar>
 						<SearchField
@@ -63,7 +64,7 @@
 					<ObjectListItem
 						type="Navigation"
 						press=".onSelectionChange"
-						title="{CustomerID}"
+						title="{CustomerID}" intro="{CompanyName}"
 >
 					</ObjectListItem>
 				</items>

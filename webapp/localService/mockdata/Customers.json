@@ -1,0 +1,9 @@
+[
+  {
+    "CustomerID": "Test1",
+    "CompanyName": "Test Description 1"
+  }, {
+    "CustomerID": "Test2",
+    "CompanyName": "Test Description 2"
+  }
+]
