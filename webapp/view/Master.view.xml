@@ -63,7 +63,7 @@
 					<ObjectListItem
 						type="Navigation"
 						press=".onSelectionChange"
-						title="{CustomerID}"
+						title="{CustomerID}" intro="{CompanyName}"
 >
 					</ObjectListItem>
 				</items>
