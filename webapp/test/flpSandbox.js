@@ -47,7 +47,7 @@ sap.ui.define([
                                 {
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "Tasks",
+									"title": "My Tasks",
 									"targetURL": "#Tasks-display"
 								}
 							}]
