@@ -32,4 +32,4 @@ server:
     configuration:
       paths:
         - path: /resources/gmriskproposal
-          src: /home/user/projects/gm_risk_proposal/webapp
+          src: ../../gm_risk_proposal/webapp

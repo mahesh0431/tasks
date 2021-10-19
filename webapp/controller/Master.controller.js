@@ -273,7 +273,11 @@ sap.ui.define([
 				name: "gmriskproposal",
 				type: "Component",
 				controlAggregation: "midColumnPages",
-				options: {}
+				options: {
+                        componentData: {
+                            buttons: new sap.m.Button()
+                        }
+                    }
 			});
 			this.getRouter().navTo("reuseroute");
 		},
