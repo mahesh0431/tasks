@@ -275,11 +275,10 @@ sap.ui.define([
                 controlAggregation: "midColumnPages",
                 options: {
                     componentData: {
-                        "CallingApp": "MyTask",
+                        "callingApp": "MyTask",
                         "TaskTitle": oItem.getTitle()
                     }
-                }
-            });
+                });
             this.getRouter().navTo("reuseroute");
         },
 

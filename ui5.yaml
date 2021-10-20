@@ -17,10 +17,10 @@ server:
         destination: capservicedest
       ui5:
         path: 
-        - /resources/
+        - /resources
         - /test-resources
         url: https://ui5.sap.com
-        directLoad: false
+        directLoad: true
         version:  # The UI5 version, for instance, 1.78.1. Empty means latest version
   # - name: fiori-tools-appreload
   #   afterMiddleware: compression
@@ -32,4 +32,4 @@ server:
     configuration:
       paths:
         - path: /resources/gmriskproposal
-          src: ../../gm_risk_proposal/webapp
+          src: /home/user/projects/gm_risk_proposal/webapp

@@ -5,7 +5,7 @@
 	xmlns:mvc="sap.ui.core.mvc">
 
 	<semantic:SemanticPage
-		id="masterPage"
+		id="masterPage" 
 		preserveHeaderStateOnScroll="true"
 		toggleHeaderOnTitleClick="false">
 		<semantic:titleHeading>
@@ -34,8 +34,9 @@
 				growing="true"
 				growingScrollToLoad="true"
 				updateFinished=".onUpdateFinished"
-				selectionChange=".onSelectionChange">
-				<headerToolbar>
+				selectionChange=".onSelectionChange"
+                >
+				<!-- <headerToolbar>
 					<OverflowToolbar>
 						<SearchField
 							id="searchField"
@@ -58,7 +59,7 @@
 							icon="sap-icon://sort"
 							type="Transparent"/>
 					</OverflowToolbar>
-				</headerToolbar>
+				</headerToolbar> -->
 				<items>
 					<ObjectListItem
 						type="Navigation"
