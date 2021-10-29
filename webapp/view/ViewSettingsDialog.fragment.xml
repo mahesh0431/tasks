@@ -1,8 +1,32 @@
 <core:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
+    <Dialog id="viewSettingsDialog" stretch="true" showHeader="true" title="Apply Filters/Sorting" type="Message">
+    <buttons>
+        <Button text="Apply" press=".onConfirmViewSettingsDialog" >
+            
+        </Button>
+    </buttons>
+        <VBox width="auto">
+            <items>
+                    <VBox >
+                <Title level="H1" text="Sort by"></Title>
+                    <items>
+                <HBox >
+                    <items>
+                        <ToggleButton text="favourites" width="10rem"  ></ToggleButton>
+                        <ToggleButton text="Priority" width="10rem"  ></ToggleButton>
+                    </items>
+                </HBox>
+                    </items>
+                    </VBox>
+                <Title level="H5"  text="Filters"></Title>
+                <HBox ></HBox>
+            </items>
+        </VBox>    
+    </Dialog>
 
-	<ViewSettingsDialog
+	<!-- <ViewSettingsDialog
 		id="viewSettingsDialog"
 		confirm=".onConfirmViewSettingsDialog">
 		<sortItems>
@@ -13,5 +37,5 @@
 
 		</sortItems>
 
-	</ViewSettingsDialog>
+	</ViewSettingsDialog> -->
 </core:FragmentDefinition>

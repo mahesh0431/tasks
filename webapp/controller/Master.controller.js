@@ -164,14 +164,15 @@ sap.ui.define([
 		 * @private
 		 */
         _applySortGroup: function (oEvent) {
-            var mParams = oEvent.getParameters(),
-                sPath,
-                bDescending,
-                aSorters = [];
-            sPath = mParams.sortItem.getKey();
-            bDescending = mParams.sortDescending;
-            aSorters.push(new Sorter(sPath, bDescending));
-            this._oList.getBinding("items").sort(aSorters);
+            // var mParams = oEvent.getParameters(),
+            //     sPath,
+            //     bDescending,
+            //     aSorters = [];
+            // sPath = mParams.sortItem.getKey();
+            // bDescending = mParams.sortDescending;
+            // aSorters.push(new Sorter(sPath, bDescending));
+            // this._oList.getBinding("items").sort(aSorters);
+            this.byId("viewSettingsDialog").close();
         },
 
 		/**

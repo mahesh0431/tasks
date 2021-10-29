@@ -7,7 +7,7 @@
 	<semantic:SemanticPage
 		id="masterPage" 
 		preserveHeaderStateOnScroll="true"
-		toggleHeaderOnTitleClick="false">
+		toggleHeaderOnTitleClick="false" showFooter="true">
 		<semantic:titleHeading>
 			<Title
 				id="masterPageTitle"
@@ -36,7 +36,7 @@
 				updateFinished=".onUpdateFinished"
 				selectionChange=".onSelectionChange"
                 >
-				<!-- <headerToolbar>
+				<headerToolbar>
 					<OverflowToolbar>
 						<SearchField
 							id="searchField"
@@ -59,7 +59,7 @@
 							icon="sap-icon://sort"
 							type="Transparent"/>
 					</OverflowToolbar>
-				</headerToolbar> -->
+				</headerToolbar>
 				<items>
 					<ObjectListItem
 						type="Navigation"
@@ -70,5 +70,11 @@
 				</items>
 			</List>
 		</semantic:content>
+        <semantic:footerCustomActions>
+            <Button id="sortButtonFooter"
+					press=".onOpenViewSettings"
+					icon="sap-icon://sort"
+					type="Transparent"/>
+        </semantic:footerCustomActions>
 	</semantic:SemanticPage>
 </mvc:View>
