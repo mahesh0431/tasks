@@ -20,7 +20,7 @@ server:
         - /resources
         - /test-resources
         url: https://ui5.sap.com
-        directLoad: true
+        directLoad: false
         version:  # The UI5 version, for instance, 1.78.1. Empty means latest version
   - name: fiori-tools-appreload
     afterMiddleware: compression
@@ -31,5 +31,7 @@ server:
     afterMiddleware: compression
     configuration:
       paths:
+        - path: /resources/grcriskassess
+          src: /home/user/projects/rm_risk_assess/webapp
         - path: /resources/gmriskproposal
           src: /home/user/projects/gm_risk_proposal/webapp

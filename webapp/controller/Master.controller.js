@@ -63,6 +63,26 @@ sap.ui.define([
         /* event handlers                                              */
         /* =========================================================== */
 
+        applyFilters: function (oEvent) {
+            var sCat = oEvent.getSource().getBindingContext().getObject().category;
+
+            this.getOwnerComponent().getModel().metadataLoaded(function () {
+                var sCatEntKey = this.getModel().createKey("/Categerys", {
+                    "Categery": sCat
+                });
+                this.getModel().read(sCatEntKey, {
+                    urlParameters: {
+                        "$top": 5,
+                        "$skip": 10
+                    },
+                    success: function () {
+
+                    }
+                });
+
+            }.bind(this));
+        },
+
 		/**
 		 * After list data is available, this handler method updates the
 		 * master list counter
@@ -262,15 +282,23 @@ sap.ui.define([
             // }, bReplace);
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.addRoute({
-                "name": "reuseroute",
-                "pattern": "childpattern",
+                "name": "reuseroute1",
+                "pattern": "childpattern1",
                 "target": ["master", {
-                    "name": "childapp",
-                    "prefix": "childprefix"
+                    "name": "childapp1",
+                    "prefix": "childprefix1"
+                }]
+            });
+            oRouter.addRoute({
+                "name": "reuseroute2",
+                "pattern": "childpattern2",
+                "target": ["master", {
+                    "name": "childapp2",
+                    "prefix": "childprefix2"
                 }]
             });
             var oTargets = oRouter.getTargets();
-            oTargets.addTarget("childapp", {
+            oTargets.addTarget("childapp1", {
                 name: "gmriskproposal",
                 type: "Component",
                 controlAggregation: "midColumnPages",
@@ -281,7 +309,23 @@ sap.ui.define([
                     }
                 }
             });
-            this.getRouter().navTo("reuseroute");
+
+            oTargets.addTarget("childapp2", {
+                name: "grcriskassess",
+                type: "Component",
+                controlAggregation: "midColumnPages",
+                options: {
+                    componentData: {
+                        "CallingApp": "MyTask",
+                        "TaskTitle": oItem.getTitle()
+                    }
+                }
+            });
+            if (oItem.getBindingContext().getProperty("CustomerID") === "Test3") {
+                this.getRouter().navTo("reuseroute2");
+            } else {
+                this.getRouter().navTo("reuseroute1");
+            }
         },
 
 		/**

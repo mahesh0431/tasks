@@ -43,6 +43,13 @@ sap.ui.define([
                                         "title": "Risk Proposal",
                                         "targetURL": "#RiskProposalApp-display"
                                     }
+                                },
+                                {
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "title": "Risk Assess",
+                                        "targetURL": "#RiskAssessApp-display"
+                                    }
                                 }, {
                                     "tileType": "sap.ushell.ui.tile.DynamicTile",
                                     "properties": {
@@ -84,6 +91,20 @@ sap.ui.define([
                                     "applicationType": "SAPUI5",
                                     "additionalInformation": "SAPUI5.Component=gmriskproposal",
                                     "url": "../resources/gmriskproposal"
+                                }
+                            },
+                            "RiskAssess-display": {
+                                "semanticObject": "RiskAssessApp",
+                                "action": "display",
+                                "description": "Risk Assess Request",
+                                "title": "Risk Assess Request",
+                                "signature": {
+                                    "parameters": {}
+                                },
+                                "resolutionResult": {
+                                    "applicationType": "SAPUI5",
+                                    "additionalInformation": "SAPUI5.Component=grcriskassess",
+                                    "url": "../resources/grcriskassess"
                                 }
                             },
                             "Tasks-display": {

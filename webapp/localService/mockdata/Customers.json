@@ -1,9 +1,12 @@
 [
   {
     "CustomerID": "Test1",
-    "CompanyName": "Test Description 1"
+    "CompanyName": "Risk Proposal"
   }, {
     "CustomerID": "Test2",
-    "CompanyName": "Test Description 2"
+    "CompanyName": "Risk Proposal"
+  }, {
+    "CustomerID": "Test3",
+    "CompanyName": "Risk Assessment"
   }
 ]

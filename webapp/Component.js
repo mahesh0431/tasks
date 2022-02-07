@@ -33,16 +33,16 @@ sap.ui.define([
             if (this.getRouter().getHashChanger().getHash() === "childpattern") {
                 var oRouter = this.getRouter();
                 oRouter.addRoute({
-                    "name": "reuseroute",
-                    "pattern": "childpattern",
+                    "name": "reuseroute1",
+                    "pattern": "childpattern1",
                     "target": ["master", {
-                        "name": "childapp",
-                        "prefix": "childprefix"
+                        "name": "childapp1",
+                        "prefix": "childprefix1"
                     }]
                 });
                 var oTargets = oRouter.getTargets();
-                oTargets.addTarget("childapp", {
-                    name: "gmriskproposal",
+                oTargets.addTarget("childapp1", {
+                    name: "grcriskassess",
                     type: "Component",
                     controlAggregation: "midColumnPages",
                     options: {
